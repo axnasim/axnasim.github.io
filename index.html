@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,26 +12,11 @@
         <p>Hi, I'm Mufasa. Check out my projects below.</p>
         <button id="theme-toggle">Toggle Theme</button>
     </header>
-<script>
-    const toggleButton = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-    }
-
-    toggleButton.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        const isDark = document.documentElement.classList.contains('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-</script>
-
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I’m a tech enthusiast with a passion for building engineering teams and high-growth scalable platfomrs.</p>
-        <p></p>I specialize in cloud technologies AWS, Azure and GCP.</p>
+        <p>I’m a tech enthusiast with a passion for building engineering teams and high-growth scalable platforms.</p>
+        <p>I specialize in cloud technologies AWS, Azure, and GCP.</p>
     </section>
 
     <section id="projects">
@@ -62,7 +47,23 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Alex Newman. All rights reserved.</p>
+        <p>&copy; 2025 Mufasa. All rights reserved.</p>
     </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme');
+
+        // Apply stored theme on page load
+        if (storedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>
