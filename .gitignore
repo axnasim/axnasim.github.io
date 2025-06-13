@@ -1,3 +1,75 @@
+# General OS generated files #
+###################################
+.DS_Store
+Thumbs.db
+
+# Compiled source #
+#####################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's generally not a good idea to track packages.
+# However, in specific scenarios, it could make sense to track the packages
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Dependency directories (e.g. npm, pip, Composer) #
+#####################################################
+node_modules/
+bower_components/
+jspm_packages/
+packages/
+.pnpm/
+vendor/
+/var/log/*
+/tmp/*
+
+# Netlify Folder
+.netlify
+
+# Temporary files #
+###################
+*~
+\#*
+.*.swp
+.lock*
+*.tmp
+temp/
+tmp/
+*.swx
+
+# IDE Specific files #
+######################
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Other #
+#########
+/output/
+/out/
+/dist/
+/build/
+/.env
+/.secret
+/credentials
+
+# GitHub Pages / Jekyll Specific #
+####################################
 # This .gitignore is appropriate for repositories deployed to GitHub Pages and using
 # a Gemfile as specified at https://github.com/github/pages-gem#conventional
 
@@ -11,7 +83,7 @@ _site/
 /vendor
 
 # Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem 
+# GitHub Pages will always use its own deployed version of pages-gem
 # This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
