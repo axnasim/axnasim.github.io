@@ -9,12 +9,29 @@
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Alex Newman. Check out my projects below.</p>
+        <p>Hi, I'm Mufasa. Check out my projects below.</p>
+        <button id="theme-toggle">Toggle Theme</button>
     </header>
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+</script>
+
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I’m a full-stack developer with a passion for building responsive, user-friendly web applications. I specialize in JavaScript, React, Node.js, and cloud technologies like Azure and AWS.</p>
+        <p>I’m a tech enthusiast with a passion for building engineering teams and high-growth scalable platfomrs.</p>
+        <p></p>I specialize in cloud technologies AWS, Azure and GCP.</p>
     </section>
 
     <section id="projects">
@@ -23,8 +40,8 @@
             <li>
                 <strong>Weather App:</strong> A React-based app that displays real-time weather using the OpenWeather API.
                 <br>
-                <a href="https://github.com/yourusername/weather-app" target="_blank">GitHub Repo</a> |
-                <a href="https://weatherapp.example.com" target="_blank">Live Demo</a>
+                <a href="https://github.com/yourusername/weather-app" target="_blank">Coming Soon!</a> |
+                <a href="https://weatherapp.example.com" target="_blank">Coming Soon!</a>
             </li>
             <li>
                 <strong>Portfolio Website:</strong> This very site, showcasing my work and contact info.
@@ -38,7 +55,7 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>
-            📧 Email: <a href="mailto:alex.newman@example.com">alex.newman@example.com</a><br>
+            📧 Email: <a href="mailto:mufasa@lion.king">mufasa@lion.king</a><br>
             🔗 LinkedIn: <a href="https://www.linkedin.com/in/alexnewman" target="_blank">My LinkedIn</a><br>
             💻 GitHub: <a href="https://github.com/alexnewman" target="_blank">My GitHub</a>
         </p>
