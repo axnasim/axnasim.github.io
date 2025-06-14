@@ -1,40 +1,26 @@
-/* style.css */
+/* style.css */More actions
 
 /* Default (Light) Theme */
 body {
-    font-family: 'Segoe UI', Tahoma, Arial, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff; /* Light background */
     color: #1a1a1a; /* Dark text */
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-    line-height: 1.2; /* Reduced line spacing */
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #0077cc; /* Primary color header */
+    color: #ffffff; /* White text on header */
+    text-align: center;
     padding: 20px;
-}
-    #theme-toggle   {
-    /*background-color: #0077cc; /* Primary color header */
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: currentColor;
-    /*color: #ffffff; /* White text on header */
-    /* text-align: center;
-    padding: 20px;*/
 }
 
 section {
     padding: 10px;
-    margin-bottom: 5px;
-    /* border-bottom: 1px solid #000; /* Separates sections */
-    /* Removed the border-bottom for no lines between sections */
-    border-bottom: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Separates sections */
 }
 
 /* Basic button styling */
