@@ -2,12 +2,13 @@
 
 /* Default (Light) Theme */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Arial, Geneva, Verdana, sans-serif;
     background-color: #ffffff; /* Light background */
     color: #1a1a1a; /* Dark text */
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    line-height: 1.2; /* Reduced line spacing */
 }
 
 header {
@@ -20,7 +21,9 @@ header {
 section {
     padding: 10px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc; /* Separates sections */
+    /* border-bottom: 1px solid #000; /* Separates sections */
+    /* Removed the border-bottom for no lines between sections */
+    border-bottom: none;
 }
 
 /* Basic button styling */
@@ -61,4 +64,4 @@ html.dark #theme-toggle:hover {
     background-color: #555;
 }
 
-/* Add more specific dark theme styles as needed for other elements */
+/* Add more specific dark theme styles as needed for other elements *
