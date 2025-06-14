@@ -1,4 +1,4 @@
-# My Portfolio Website
+# Portfolio
 
 This is a simple portfolio website showcasing my projects and contact information. It features a theme toggle that allows users to switch between light and dark modes.
 
