@@ -20,7 +20,7 @@ header {
 section {
     padding: 10px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc; /* Separates sections */
+    border-bottom: 1px solid #000; /* Separates sections */
 }
 
 /* Basic button styling */
