@@ -83,4 +83,4 @@ This project is open-source and available under the [Specify License - e.g., MIT
 *   **Name:** Mufasa (Mufasa King)
 *   **Email:** [mufasa@lion.king](mailto:mufasa@lion.king)
 *   **LinkedIn:** [https://www.linkedin.com/](https://www.linkedin.com/)
-*   **GitHub:** [https://github.com/(https://github.com/)
+*   **GitHub:** [https://github.com/](https://github.com/)
