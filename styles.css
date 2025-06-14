@@ -20,7 +20,7 @@ header {
 
 section {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     /* border-bottom: 1px solid #000; /* Separates sections */
     /* Removed the border-bottom for no lines between sections */
     border-bottom: none;
