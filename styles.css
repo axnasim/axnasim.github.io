@@ -12,10 +12,21 @@ body {
 }
 
 header {
-    background-color: #0077cc; /* Primary color header */
-    color: #ffffff; /* White text on header */
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
+}
+    #theme-toggle   {
+    /*background-color: #0077cc; /* Primary color header */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: currentColor;
+    /*color: #ffffff; /* White text on header */
+    /* text-align: center;
+    padding: 20px;*/
 }
 
 section {

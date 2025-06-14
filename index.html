@@ -1,69 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tekbytz.sh</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>tekbytz.sh</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Ensuring header is flex container */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Style for icon button */
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff; /* or set to match your theme */
+    transition: color 0.3s;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Tekbytz</h1>
-        <!--p>Hi, I'm Mufasa. Check out my projects below.</p-->
-        <button id="theme-toggle">Toggle Theme</button>
-    </header>
+<header>
+  <h1>Welcome to Tekbytz</h1>
+  <!-- Icon button for theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle Theme">
+    <i class="fas fa-moon"></i>
+  </button>
+</header>
 
-    <section id="Me">
-        <h2>Me</h2>
-        <p>I am a builder, mentor and strategic partner with a passion for grunt work. Collaboration and technical dives are cores of my engineering work to rollout processes for fast growing startups and clients</p>
-        <!--hands-on technology leader who combines strong technical expertise with a passion for building successful teams. I architect scalable solutions, enable developer platforms, and apply AI/ML techniques to solve complex business challenges leveraging enterprise-grade cloud environments.</p-->
-    </section>
+<!-- Your sections -->
+<section id="Me">
+  <h2>Me</h2>
+  <p>I am a builder, mentor and strategic partner with a passion for grunt work. Collaboration and technical dives are cores of my engineering work to rollout processes for fast growing startups and clients</p>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Linux Stuff </strong>
-                <br>
-                <a href="linux/linux-commands.docx" target="_blank" style="margin-left: 20px;">Click Me! </a> 
-                <!--a href="https://weatherapp.example.com" target="_blank">Coming Soon!</a-->
-            </li>
-            <li>
-                <strong>Portfolio Website:</strong> This very site, showcasing my work and contact info.
-                <br>
-                <a href="https://github.com/yourusername/portfolio" target="_blank">GitHub Repo</a> |
-                <a href="https://yourdomain.com" target="_blank">Live Site</a>
-            </li>
-        </ul>
-    </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>Linux Stuff </strong>
+      <br>
+      <a href="linux/linux-commands.docx" target="_blank" style="margin-left: 20px;">Click Me!</a>
+    </li>
+    <li>
+      <strong>Portfolio Website:</strong> This very site, showcasing my work and contact info.
+      <br>
+      <a href="https://github.com/yourusername/portfolio" target="_blank">GitHub Repo</a> |
+      <a href="https://yourdomain.com" target="_blank">Live Site</a>
+    </li>
+  </ul>
+</section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>
-            📧 Email: <a href="mailto:mufasa@lion.king">mufasa@lion.king</a><br>
-            🔗 LinkedIn: <a href="https://www.linkedin.com/" target="_blank">My LinkedIn</a><br>
-            💻 GitHub: <a href="https://github.com/" target="_blank">My GitHub</a>
-        </p>
-    </section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>
+    📧 Email: <a href="mailto:mufasa@lion.king">mufasa@lion.king</a><br>
+    🔗 LinkedIn: <a href="https://www.linkedin.com/" target="_blank">My LinkedIn</a><br>
+    💻 GitHub: <a href="https://github.com/" target="_blank">My GitHub</a>
+  </p>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Mufasa. All rights reserved.</p>
-    </footer>
+<footer>
+  <p>&copy; 2025 Mufasa. All rights reserved.</p>
+</footer>
 
-    <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        const storedTheme = localStorage.getItem('theme');
+<!-- Theme toggle script -->
+<script>
+  const toggleButton = document.getElementById('theme-toggle');
+  const icon = toggleButton.querySelector('i');
+  const storedTheme = localStorage.getItem('theme');
 
-        // Apply stored theme on page load
-        if (storedTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-        }
+  // Apply stored theme on page load
+  if (storedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+    icon.className = 'fas fa-sun'; // Sun icon in dark mode
+  } else {
+    icon.className = 'fas fa-moon'; // Moon icon in light mode
+  }
 
-        toggleButton.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-    </script>
+  toggleButton.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+
+    // Save theme preference
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+    // Switch icon
+    if (isDark) {
+      icon.className = 'fas fa-sun'; // sun icon
+    } else {
+      icon.className = 'fas fa-moon'; // moon icon
+    }
+  });
+</script>
 </body>
 </html>
